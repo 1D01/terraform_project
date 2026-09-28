@@ -46,5 +46,6 @@ pipeline {
                 echo 'Pipeline execution finished. Cleaning up workspace...'
                 cleanWs()
             }
+        }
     }
 }
