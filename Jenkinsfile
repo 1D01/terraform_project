@@ -32,7 +32,9 @@ pipeline {
             }
             steps {
                 echo 'Starting PowerShell container...'
-                pwsh -Command 'Write-Host "PowerShell container active."; $PSVersionTable.PSVersion'
+                sh '''
+                    pwsh -Command 'Write-Host "PowerShell container active."; $PSVersionTable.PSVersion'
+                '''
                 // pwsh -File scripts/your_task.ps1
             }
         }
