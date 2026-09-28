@@ -42,8 +42,9 @@ pipeline {
     
     post {
         always {
-            echo 'Pipeline execution finished. Cleaning up workspace...'
-            cleanWs()
-        }
+        node {
+                echo 'Pipeline execution finished. Cleaning up workspace...'
+                cleanWs()
+            }
     }
 }
